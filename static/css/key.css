@@ -1,0 +1,108 @@
+/* CSS - Key page */
+
+/* >> Settings */
+
+main #box #settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main #box #settings .preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+    padding: 0px 10px;
+    height: fit-content;
+    align-self: center;
+}
+
+.preview label {
+    font-size: 4.5em;
+}
+
+main #box #settings .wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#settings .wrapper label {
+    font-size: 1.2em;
+}
+
+/* >> Output */
+
+main #box #output {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid white;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#output table {
+    border: 1px solid white;
+}
+
+#output .wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#chords-menu label {
+    margin-right: 10px;
+}
+
+/* Elements */
+label {
+    color: white;
+}
+
+select {
+    width: 170px;
+    margin-bottom: 20px;
+}
+
+th {
+    color: white;
+    background-color: #7d7a7a5e;
+    font-size: 1.4em;
+    width: 60px;
+    text-align: center;
+}
+
+td {
+    color: white;
+    font-size: 1.4em;
+    width: 60px;
+    text-align: center;
+}
+
+    /* Accords */
+
+/* Mineure */
+td.min {
+    color: #0f3458	;
+}
+
+/* Majeure */
+td.maj {
+    color: #ecff83	;
+}
+
+/* Mineure bémol 5 */
+td.mb5 {
+    color: #C0392B;
+}
+
+    /* Fretboard */
+#fretboard .highlight {
+    background-color: #b7cbca56;
+}

@@ -1,0 +1,14 @@
+/* Typography CSS */
+@font-face {
+    font-family: 'Musician';
+    src: url('/static/fonts/MusicianDemo.woff2') format('woff2'),
+        url('/static/fonts/MusicianDemo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 {
+    font-family: 'Musician';
+    color: rgb(209, 218, 230);
+}

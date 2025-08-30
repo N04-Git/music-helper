@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+<!-- Music Helper -->
+{% block title %}MH / KNOWLEDGE{% endblock %}
+
+<!-- Additional css -->
+{% block css %}
+<link rel="stylesheet" href="static/css/knowledge.css">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <h1>Knowledge</h1>
+
+        <!-- Fretboard -->
+        <table border="2" id="fretboard">
+            <!-- Head -->
+            <thead>
+                <th>12</th>
+                <th>11</th>
+                <th>10</th>
+                <th>9</th>
+                <th>8</th>
+                <th>7</th>
+                <th>6</th>
+                <th>5</th>
+                <th>4</th>
+                <th>3</th>
+                <th>2</th>
+                <th>1</th>
+                <th>0</th>
+            </thead>
+
+            <!-- Body -->
+            <tbody id="chords-table">
+                <!-- Corde de Mi (aigue) -->
+                <tr>
+                    <td>Mi</td>
+                    <td>Ré#</td>
+                    <td>Ré</td>
+                    <td>Do#</td>
+                    <td>Do</td>
+                    <td>Si</td>
+                    <td>La#</td>
+                    <td>La</td>
+                    <td>Sol#</td>
+                    <td>Sol</td>
+                    <td>Fa#</td>
+                    <td>Fa</td>
+                    <th>Mi</th>
+                </tr>
+                
+                <!-- Corde de Si -->
+                <tr>
+                    <td>Si</td>
+                    <td>La#</td>
+                    <td>La</td>
+                    <td>Sol#</td>
+                    <td>Sol</td>
+                    <td>Fa#</td>
+                    <td>Fa</td>
+                    <td>Mi</td>
+                    <td>Ré#</td>
+                    <td>Ré</td>
+                    <td>Do#</td>
+                    <td>Do</td>
+                    <th>Si</th>
+                </tr>
+                
+                <!-- Corde de Sol -->
+                <tr>
+                    <td>Sol</td>
+                    <td>Fa#</td>
+                    <td>Fa</td>
+                    <td>Mi</td>
+                    <td>Ré#</td>
+                    <td>Ré</td>
+                    <td>Do#</td>
+                    <td>Do</td>
+                    <td>Si</td>
+                    <td>La#</td>
+                    <td>La</td>
+                    <td>Sol#</td>
+                    <th>Sol</th>
+                </tr>
+
+                <!-- Corde de Ré -->
+                <tr>
+                    <td>Ré</td>
+                    <td>Do#</td>
+                    <td>Do</td>
+                    <td>Si</td>
+                    <td>La#</td>
+                    <td>La</td>
+                    <td>Sol#</td>
+                    <td>Sol</td>
+                    <td>Fa#</td>
+                    <td>Fa</td>
+                    <td>Mi</td>
+                    <td>Ré#</td>
+                    <th>Ré</th>
+                </tr>
+
+                <!-- Corde de La -->
+                <tr>
+                    <td>La</td>
+                    <td>Sol#</td>
+                    <td>Sol</td>
+                    <td>Fa#</td>
+                    <td>Fa</td>
+                    <td>Mi</td>
+                    <td>Ré#</td>
+                    <td>Ré</td>
+                    <td>Do#</td>
+                    <td>Do</td>
+                    <td>Si</td>
+                    <td>La#</td>
+                    <th>La</th>
+                </tr>
+
+                <!-- Corde de Mi (grave) -->
+                <tr>
+                    <td>Mi</td>
+                    <td>Re#</td>
+                    <td>Ré</td>
+                    <td>Do#</td>
+                    <td>Do</td>
+                    <td>Si</td>
+                    <td>La#</td>
+                    <td>La</td>
+                    <td>Sol#</td>
+                    <td>Sol</td>
+                    <td>Fa#</td>
+                    <td>Fa</td>
+                    <th>Mi</th>
+                </tr>
+                
+            </tbody>
+
+        </table>
+
+        <!-- Choix du pattern -->
+        <div id="menu">
+            <!-- Gamme -->
+            <div class="field">
+                <label>Gamme</label>
+                <select id="gamme-dropdown">
+                    <option value="0">Majeure naturelle</option>
+                    <option value="1">Mineure naturelle</option>
+                </select>
+            </div>
+            
+            <!-- Variation -->
+            <div class="field">
+                <label>Variations</label>
+                <select id="variations-dropdown">
+                </select>
+            </div>
+            
+        </div>
+
+    </main>
+
+    <script src="/static/js/knowledge.js"></script>
+{% endblock %}

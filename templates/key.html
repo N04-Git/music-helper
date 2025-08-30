@@ -1,0 +1,378 @@
+{% extends "base.html" %}
+
+<!-- Music Helper / Key -->
+{% block title %}MH / GAMME{% endblock %}
+
+<!-- Additional css -->
+{% block css %}
+<link rel="stylesheet" href="static/css/key.css">
+{% endblock %}
+
+{% block content %}
+    <main>
+        <h1>Accords & Gamme</h1>
+
+        <div id="box">
+            <div id="settings">
+                <!-- Preview -->
+                <div class="preview">
+                    <label id="preview">Do M</label>
+                </div>
+                
+                <div class="wrapper">
+                    <!-- Gamme -->
+                    <label for="gamme">Gamme</label>
+                    <select name="gamme" id="gamme">
+                        <option value="0">Majeure naturelle</option>
+                        <option value="1">Mineure naturelle</option>
+                    </select>
+
+                    <!-- Tonalité -->
+                    <label for="tonalite">Tonalité</label>
+                    <select name="tonalite" id="tonalite">
+                        <option value="0">Do</option>
+                        <option value="1">Do#</option>
+                        <option value="2">Ré</option>
+                        <option value="3">Ré#</option>
+                        <option value="4">Mi</option>
+                        <option value="5">Fa</option>
+                        <option value="6">Fa#</option>
+                        <option value="7">Sol</option>
+                        <option value="8">Sol#</option>
+                        <option value="9">La</option>
+                        <option value="10">La#</option>
+                        <option value="11">Si</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div id="output">
+
+                <!-- Gamme -->
+                <table border="2">
+                    <!-- Head -->
+                    <thead>
+                        <tr>
+                            <th>I</th>
+                            <th> </th>
+                            <th>II</th>
+                            <th> </th>
+                            <th>III</th>
+                            <th> </th>
+                            <th>IV</th>
+                            <th> </th>
+                            <th>V</th>
+                            <th> </th>
+                            <th>VI</th>
+                            <th> </th>
+                            <th>VII</th>
+                            <th> </th>
+                            <th>VIII</th>
+                        </tr>
+                    </thead>
+                    
+                    <!-- Body -->
+                    <tbody>
+                        <!-- Distances (Tons) -->
+                        <tr id="distances">
+                            <td> </td>
+                            <td>1</td>
+                            <td> </td>
+                            <td>1</td>
+                            <td> </td>
+                            <td>0.5</td>
+                            <td> </td>
+                            <td>1</td>
+                            <td> </td>
+                            <td>1</td>
+                            <td> </td>
+                            <td>1</td>
+                            <td> </td>
+                            <td>0.5</td>
+                            <td> </td>
+                        </tr>
+
+                        <!-- Notes -->
+                        <tr id="notes">
+                            <td>Do</td>
+                            <td></td>
+                            <td>Ré</td>
+                            <td></td>
+                            <td>Mi</td>
+                            <td></td>
+                            <td>Fa</td>
+                            <td></td>
+                            <td>Sol</td>
+                            <td></td>
+                            <td>La</td>
+                            <td></td>
+                            <td>Si</td>
+                            <td></td>
+                            <td>Do</td>
+                        </tr>
+                        
+                    </tbody>
+                
+                </table>
+
+                <!-- Accords -->
+                <table border="2">
+                    <!-- Head -->
+                    <thead>
+                        <th>F</th>
+                        <th> </th>
+                        <th>3</th>
+                        <th> </th>
+                        <th>5</th>
+                        <th style="width: 165px; margin-left: 15px;">Accord</th>
+                    </thead>
+
+                    <!-- Body -->
+                    <tbody id="accords">
+                        <!-- Accords 1 -->
+                        <tr>
+                            <td>Do</td>
+                            <td>2</td>                        
+                            <td>Mi</td>
+                            <td>1.5</td>
+                            <td>Sol</td>
+                            <td>Do M</td>
+                        </tr>
+                        <!-- Accords 2 -->
+                        <tr>
+                            <td>Ré</td>
+                            <td>1.5</td>                        
+                            <td>Fa</td>
+                            <td>2</td>
+                            <td>La</td>
+                            <td>Ré m</td>
+                        </tr>
+                        <!-- Accords 3 -->
+                        <tr>
+                            <td>Mi</td>
+                            <td>1.5</td>                        
+                            <td>Sol</td>
+                            <td>2</td>
+                            <td>Si</td>
+                            <td>Mi m</td>
+                        </tr>
+                        <!-- Accords 4 -->
+                        <tr>
+                            <td>Fa</td>
+                            <td>2</td>                        
+                            <td>La</td>
+                            <td>1.5</td>
+                            <td>Do</td>
+                            <td>Fa M</td>
+                        </tr>
+                        <!-- Accords 5 -->
+                        <tr>
+                            <td>Sol</td>
+                            <td>2</td>                        
+                            <td>Si</td>
+                            <td>1.5</td>
+                            <td>Ré</td>
+                            <td>Sol M</td>
+                        </tr>
+                        <!-- Accords 6 -->
+                        <tr>
+                            <td>La</td>
+                            <td>1.5</td>                        
+                            <td>Do</td>
+                            <td>2</td>
+                            <td>Mi</td>
+                            <td>La m</td>
+                        </tr>
+                        <!-- Accords 7 -->
+                        <tr>
+                            <td>Si</td>
+                            <td>1.5</td>                        
+                            <td>Ré</td>
+                            <td>1.5</td>
+                            <td>Fa</td>
+                            <td>Si m♭5</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+                <div class="wrapper">
+                    <!-- Accords dropdown -->
+                    <select name="chords" id="chords-dropdown">
+                    </select>
+
+                    <!-- Accords - Choix des cordes -->
+                    <div id="chords-menu">
+
+                        <label>
+                            <input type="checkbox">
+                            Mi (aiguë)
+                        </label>
+                        
+                        <label>
+                            <input type="checkbox">
+                            Si
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Sol
+                        </label>
+
+                        <label>
+                            <input type="checkbox">
+                            Ré
+                        </label>
+
+                        <label>
+                            <input type="checkbox" checked>
+                            La
+                        </label>
+
+                        <label>
+                            <input type="checkbox" checked>
+                            Mi (grave)
+                        </label>
+
+                    </div>
+
+
+                </div>
+
+                <!-- Fretboard - Accords -->
+                <table border="2" id="fretboard">
+                    <!-- Head -->
+                    <thead>
+                        <th>12</th>
+                        <th>11</th>
+                        <th>10</th>
+                        <th>9</th>
+                        <th>8</th>
+                        <th>7</th>
+                        <th>6</th>
+                        <th>5</th>
+                        <th>4</th>
+                        <th>3</th>
+                        <th>2</th>
+                        <th>1</th>
+                        <th>0</th>
+                    </thead>
+
+                    <!-- Body -->
+                    <tbody id="chords-table">
+                        <!-- Corde de Mi (aigue) -->
+                        <tr>
+                            <td>Mi</td>
+                            <td>Ré#</td>
+                            <td>Ré</td>
+                            <td>Do#</td>
+                            <td>Do</td>
+                            <td>Si</td>
+                            <td>La#</td>
+                            <td>La</td>
+                            <td>Sol#</td>
+                            <td>Sol</td>
+                            <td>Fa#</td>
+                            <td>Fa</td>
+                            <th>Mi</th>
+                        </tr>
+                        
+                        <!-- Corde de Si -->
+                        <tr>
+                            <td>Si</td>
+                            <td>La#</td>
+                            <td>La</td>
+                            <td>Sol#</td>
+                            <td>Sol</td>
+                            <td>Fa#</td>
+                            <td>Fa</td>
+                            <td>Mi</td>
+                            <td>Ré#</td>
+                            <td>Ré</td>
+                            <td>Do#</td>
+                            <td>Do</td>
+                            <th>Si</th>
+                        </tr>
+                        
+                        <!-- Corde de Sol -->
+                        <tr>
+                            <td>Sol</td>
+                            <td>Fa#</td>
+                            <td>Fa</td>
+                            <td>Mi</td>
+                            <td>Ré#</td>
+                            <td>Ré</td>
+                            <td>Do#</td>
+                            <td>Do</td>
+                            <td>Si</td>
+                            <td>La#</td>
+                            <td>La</td>
+                            <td>Sol#</td>
+                            <th>Sol</th>
+                        </tr>
+
+                        <!-- Corde de Ré -->
+                        <tr>
+                            <td>Ré</td>
+                            <td>Do#</td>
+                            <td>Do</td>
+                            <td>Si</td>
+                            <td>La#</td>
+                            <td>La</td>
+                            <td>Sol#</td>
+                            <td>Sol</td>
+                            <td>Fa#</td>
+                            <td>Fa</td>
+                            <td>Mi</td>
+                            <td>Ré#</td>
+                            <th>Ré</th>
+                        </tr>
+
+                        <!-- Corde de La -->
+                        <tr>
+                            <td>La</td>
+                            <td>Sol#</td>
+                            <td>Sol</td>
+                            <td>Fa#</td>
+                            <td>Fa</td>
+                            <td>Mi</td>
+                            <td>Ré#</td>
+                            <td>Ré</td>
+                            <td>Do#</td>
+                            <td>Do</td>
+                            <td>Si</td>
+                            <td>La#</td>
+                            <th>La</th>
+                        </tr>
+
+                        <!-- Corde de Mi (grave) -->
+                        <tr>
+                            <td>Mi</td>
+                            <td>Re#</td>
+                            <td>Ré</td>
+                            <td>Do#</td>
+                            <td>Do</td>
+                            <td>Si</td>
+                            <td>La#</td>
+                            <td>La</td>
+                            <td>Sol#</td>
+                            <td>Sol</td>
+                            <td>Fa#</td>
+                            <td>Fa</td>
+                            <th>Mi</th>
+                        </tr>
+                        
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </main>
+
+    <script src="/static/js/key.js"></script>
+{% endblock %}

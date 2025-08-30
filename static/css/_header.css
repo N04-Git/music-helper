@@ -1,0 +1,31 @@
+/* Designed for header only */
+header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+header #items-wrapper {
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+header #items-wrapper .item {
+    border: 1px solid rgba(56, 51, 95, 0.4);
+    border-radius: 20px;
+    padding: 5px 15px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+header #items-wrapper .item:hover {
+    border-color: rgba(101, 94, 153, 0.692);
+    opacity: 0.9;
+}
+
+header #items-wrapper .item img {
+    width: 64px;
+    filter: invert(1);
+}

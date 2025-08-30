@@ -1,0 +1,36 @@
+th {
+    color: white;
+    background-color: #7d7a7a5e;
+    font-size: 1.4em;
+    width: 60px;
+    text-align: center;
+}
+
+td {
+    color: white;
+    font-size: 1.4em;
+    width: 60px;
+    text-align: center;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+}
+
+#menu .field {
+    margin: 15px;
+    padding: 5px;
+}
+
+#menu .field label {
+    color: white;
+}
+
+#menu .field select {
+    width: 150px;
+}
+
+td.highlight {
+    background-color: #00ffff8f;
+}
