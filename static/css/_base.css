@@ -5,7 +5,7 @@ body {
 	padding: 0;
 	background: linear-gradient(-45deg, #2f2f2f, #3a3a5e, #32415e, #1f5a80);
 	height: 100vh;
-	overflow: hidden;
+	overflow-y: auto;
 	background-size: 400% 400%;
 	animation: animateBG 15s ease infinite;
 }
